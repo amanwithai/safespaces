@@ -5,12 +5,15 @@ import { JSONFile } from "lowdb/node";
 import { nanoid } from "nanoid";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs/promises";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 8787;
 const DATA_PATH = path.join(__dirname, "data", "db.json");
+
+await fs.mkdir(path.dirname(DATA_PATH), { recursive: true });
 
 const adapter = new JSONFile(DATA_PATH);
 const db = new Low(adapter, {
