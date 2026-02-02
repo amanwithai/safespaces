@@ -35,6 +35,10 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true, time: Date.now() });
 });
 
+app.get("/", (_req, res) => {
+  res.send("SafeSpaces API is running. Use /api/health or /api/alerts.");
+});
+
 app.post("/api/parents/register", async (req, res) => {
   const name = (req.body?.name || "Parent").slice(0, 80);
   const parentId = `parent_${nanoid(8)}`;
