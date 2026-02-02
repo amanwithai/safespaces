@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SafeSpaces Options</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SafeSpaces Settings</h1>
+      <label>
+        <span>Enable filtering</span>
+        <input id="enabled" type="checkbox" />
+      </label>
+
+      <label>
+        <span>Server URL</span>
+        <input id="serverUrl" type="text" placeholder="http://localhost:8787" />
+      </label>
+
+      <label>
+        <span>Child ID</span>
+        <input id="childId" type="text" placeholder="child-1" />
+      </label>
+
+      <label>
+        <span>Safe replace text</span>
+        <input id="safeReplace" type="text" placeholder="[safe]" />
+      </label>
+
+      <label>
+        <span>Alert threshold</span>
+        <input id="alertThreshold" type="number" min="1" max="5" />
+      </label>
+
+      <button id="save">Save</button>
+      <div id="status"></div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

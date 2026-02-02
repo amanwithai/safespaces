@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SafeSpaces Parent Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="logo">SS</div>
+        <div>
+          <h1>SafeSpaces</h1>
+          <p>Parent Safety Dashboard</p>
+        </div>
+      </div>
+      <div class="controls">
+        <input id="serverUrl" type="text" placeholder="http://localhost:8787" />
+        <button id="refresh">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="stats">
+        <h2>Alert Summary</h2>
+        <div class="stats-grid">
+          <div>
+            <span class="label">Total Alerts</span>
+            <span class="value" id="totalAlerts">0</span>
+          </div>
+          <div>
+            <span class="label">Grooming</span>
+            <span class="value" id="groomingCount">0</span>
+          </div>
+          <div>
+            <span class="label">Scam</span>
+            <span class="value" id="scamCount">0</span>
+          </div>
+          <div>
+            <span class="label">Impersonation</span>
+            <span class="value" id="impersonationCount">0</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="alerts">
+        <div class="section-header">
+          <h2>Recent Alerts</h2>
+          <div class="filters">
+            <input id="childFilter" type="text" placeholder="Filter by child ID" />
+          </div>
+        </div>
+        <ul id="alertsList"></ul>
+      </section>
+
+      <section class="card" id="subscription">
+        <h2>Subscription</h2>
+        <p>Keep alerts active and extend coverage across devices.</p>
+        <div class="subscription-controls">
+          <input id="parentId" type="text" placeholder="Parent ID" />
+          <select id="plan">
+            <option value="standard">Standard</option>
+            <option value="family">Family</option>
+          </select>
+          <button id="checkout">Start Checkout</button>
+        </div>
+        <div id="checkoutStatus"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
