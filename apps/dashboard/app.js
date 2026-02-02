@@ -11,7 +11,7 @@ const planSelect = document.getElementById("plan");
 const checkoutBtn = document.getElementById("checkout");
 const checkoutStatus = document.getElementById("checkoutStatus");
 
-const defaultServer = "http://localhost:8787";
+const defaultServer = "https://safespaces-production.up.railway.app";
 serverInput.value = localStorage.getItem("serverUrl") || defaultServer;
 
 function getServerUrl() {

@@ -1,6 +1,6 @@
 const DEFAULT_SETTINGS = {
   enabled: true,
-  serverUrl: "http://localhost:8787",
+  serverUrl: "https://safespaces-production.up.railway.app",
   childId: "child-1",
   safeReplace: "[safe]",
   alertThreshold: 1
