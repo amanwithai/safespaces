@@ -182,3 +182,13 @@ button:hover {
     flex-direction: column;
   }
 }
+
+a {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
